@@ -1,0 +1,14 @@
+.recommend {
+  margin-top: 100px;
+
+  &__title {
+    background-color: #fff;
+    padding: 0;
+  }
+  &__card{
+    &-title{
+        width: 300px;
+        font-size: 18px;
+    }
+  }
+}

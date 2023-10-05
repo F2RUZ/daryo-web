@@ -1,0 +1,22 @@
+.localnews {
+  flex-direction: row-reverse;
+  &__card {
+    &-title{
+        font-size: 17px;
+    }
+  }
+
+}
+
+@media only screen and (max-width : 425px){
+  .localnews{
+    flex-direction: column-reverse;
+  }
+  .worldnews__right{
+    flex-direction: column;
+  }
+  .localnews__card-title{
+    width: 180px;
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,56 @@
+.lastnews {
+  position: relative;
+  width: 500px;
+  height: 900px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &__title {
+    background-color: rgb(0, 162, 255);
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+
+  &__span {
+    margin-top: 30px;
+
+    width: 50px;
+    height: 3px;
+    background-color: rgb(0, 149, 255);
+  }
+  &__bottom {
+    margin-top: 50px;
+  }
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    &-left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &-title {
+      width: 80%;
+      line-height: 1.5;
+      font-size: 16px;
+      transition: all 0.3s linear;
+      cursor: pointer;
+      &:hover {
+        color: rgb(12, 117, 192);
+      }
+    }
+    &-img {
+      width: 150px;
+      height: 100px;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      &:hover {
+        transform: scale(1.01, 1.01);
+      }
+    }
+    &-text {
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.footer {
+  width: 1640px;
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  &__logo {
+    width: 200px;
+  }
+  &__text {
+    color: rgba(255, 255, 255, 0.629);
+    letter-spacing: 1.1px;
+    font-size: 20px;
+    width: 1500px;
+  }
+  &__media {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+    border-radius: 50%;
+    background: rgb(77, 82, 77);
+    color: #fff;
+    transition: all 0.3s linear;
+    background: linear-gradient(
+      90deg,
+      rgba(77, 82, 77, 1) 0%,
+      rgba(77, 70, 73, 1) 100%,
+      rgba(11, 11, 11, 1) 100%,
+      rgba(36, 42, 96, 1) 100%,
+      rgba(185, 87, 133, 1) 100%,
+      rgba(166, 138, 35, 1) 100%,
+      rgba(113, 112, 122, 1) 100%
+    );
+    &:hover {
+        color: rgb(36, 36, 205);
+      background: rgb(43, 39, 39);
+      background: linear-gradient(
+        90deg,
+        rgba(43, 39, 39, 1) 0%,
+        rgba(73, 67, 70, 1) 100%,
+        rgba(11, 11, 11, 1) 100%,
+        rgba(36, 42, 96, 1) 100%,
+        rgba(185, 87, 133, 1) 100%,
+        rgba(166, 138, 35, 1) 100%,
+        rgba(113, 112, 122, 1) 100%
+      );
+    }
+  }
+}

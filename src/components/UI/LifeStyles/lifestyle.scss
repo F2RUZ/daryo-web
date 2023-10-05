@@ -1,0 +1,48 @@
+.lifestyles {
+  margin-top: 100px;
+  position: relative;
+  &__img {
+    width: 500px;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.005, 1.005);
+    }
+  }
+  &__box {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__title {
+    width: 400px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &__intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+  }
+  &__subtitle {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .lifestyles__intro {
+    flex-direction: column;
+  }
+  .lifestyles__box {
+    display: none;
+  }
+}
