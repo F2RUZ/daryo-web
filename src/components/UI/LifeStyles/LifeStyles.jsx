@@ -1,6 +1,7 @@
 import React from "react";
 import "./lifestyle.scss";
 import bgImg from "../../../assets/images/namanganda-textil.jpg";
+import Pentagon from "../../../assets/images/penta.jpg";
 import lifeStyleNews from "../../../assets/fetch-data/lifeStyle-data-news";
 import RecommensCard from "../../UI/RecommendCard/RecommensCard";
 const LifeStyles = () => {
@@ -11,14 +12,14 @@ const LifeStyles = () => {
       <hr className="lastnews__hr worldnews__hr" />
       <div className="lifestyles__intro">
         <div className="lifestyles__intro-left">
-          <img src={bgImg} className="lifestyles__img" alt="" />
+          <img src={Pentagon} className="lifestyles__img" alt="" />
 
           <div className="lifestyles__box">
             <button className="lifestyles__btn intro__btn">LAYFSTAYL</button>
             <h2 className="lifestyles__title">
               Dunyodagi eng qimmat atir qancha turadi va qayerda saqlanadi?
             </h2>
-            <p>15:00 / 05.01.2023</p>
+            <p className="lifestyles__text">15:00 / 05.01.2023</p>
           </div>
         </div>
         <div className="lifestyles__intro-left">
@@ -29,7 +30,7 @@ const LifeStyles = () => {
             <h2 className="lifestyles__title">
               Dunyodagi eng qimmat atir qancha turadi va qayerda saqlanadi?
             </h2>
-            <p>15:00 / 05.01.2023</p>
+            <p className="lifestyles__text">15:00 / 05.01.2023</p>
           </div>
         </div>
       </div>

@@ -34,6 +34,12 @@ const IntroBottomNews = [
       "Namanganda tekstil korxonasi xodimlarida zaharlanish kuzatildi. Ulardan 5 nafari kasalxonaga yotqizilgan (video)",
     ImgUrl: img4,
   },
+  {
+    id: "5",
+    title:
+      "Namanganda tekstil korxonasi xodimlarida zaharlanish kuzatildi. Ulardan 5 nafari kasalxonaga yotqizilgan (video)",
+    ImgUrl: img4,
+  },
 ];
 
 export default IntroBottomNews;

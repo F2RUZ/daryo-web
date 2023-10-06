@@ -1,3 +1,11 @@
+:root {
+  --body_background: white;
+  --body_color: black;
+}
+[data-theme="dark"] {
+  --body_background: rgba(2, 6, 65, 0.999);
+  --body_color: white;
+}
 
 body {
   font-family: "Roboto";

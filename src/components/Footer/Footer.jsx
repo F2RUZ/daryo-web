@@ -1,10 +1,13 @@
 import React from "react";
 import "./footer.scss";
 import logo from "../../assets/images/footer-logo-white.png";
+import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
-      <img className="footer__logo" src={logo} alt="" />
+      <NavLink to="/">
+        <img className="footer__logo" src={logo} alt="" />
+      </NavLink>
       <p className="footer__text">
         “Daryo” internet-nashrining (O‘zbekiston matbuot va axborot agentligi
         (O‘zMAA, hozirgi O‘zbekiston Respublikasi Prezidenti Administratsiyasi
@@ -20,19 +23,19 @@ const Footer = () => {
       </p>
       <div className="footer__media">
         <div className="footer__social">
-          <i className="ri-telegram-fill"></i>
+          <i className=" social ri-telegram-fill"></i>
         </div>
         <div className="footer__social">
-          <i className="ri-youtube-fill"></i>
+          <i className=" social ri-youtube-fill"></i>
         </div>
         <div className="footer__social">
-          <i className="ri-facebook-fill"></i>
+          <i className=" social ri-facebook-fill"></i>
         </div>
         <div className="footer__social">
-          <i className="ri-instagram-line"></i>
+          <i className=" social ri-instagram-line"></i>
         </div>
         <div className="footer__social">
-          <i className="ri-twitter-fill"></i>
+          <i className=" social ri-twitter-fill"></i>
         </div>
       </div>
     </div>

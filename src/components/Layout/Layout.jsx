@@ -1,43 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import TopNav from "../topNav/TopNav";
 import Navbar from "../Navbar/Navbar";
-import Intro from "../UI/Intro/Intro";
 import LastNews from "../UI/LastNews/LastNews";
-import WorldNews from "../UI/WorldNews/WorldNews";
 import Recommend from "../UI/Recommend/Recommend";
-import LocalNews from "../UI/LocalNews/LocalNews";
 import Finance from "../UI/Finance/Finance";
-import LifeStyles from "../UI/LifeStyles/LifeStyles";
 import WidelyRead from "../UI/WidelyRead/WidelyRead";
-import Reclam from "../UI/Reclam/Reclam";
 import Footer from "../Footer/Footer";
 import FooterBottom from "../FooterBottom/FooterBottom";
+import Router from "../../Routes/Router";
+import NavBurger from "../NavBurger/NavBurger";
 
 const Layout = () => {
+  const [showNav, setShowNav] = useState(false);
+  const toggleNav = () => {
+    setShowNav(!showNav);
+  };
+
   return (
     <>
       <div className="wrapper">
         <div className="topNavbar">
           <TopNav />
         </div>
-        <nav className="NAVBAR">
-          <Navbar />
-        </nav>
-        <main className="main">
-          <div className="main__left">
-            <Intro />
-            <WorldNews />
-            <LocalNews />
-            <LifeStyles />
-            <Reclam />
-          </div>
-          <div className="main__right">
-            <LastNews />
-            <Recommend />
-            <Finance />
-            <WidelyRead />
-          </div>
-        </main>
+
+        <div className="container">
+          <nav className="NAVBAR">
+            <Navbar toggleNav={toggleNav} />
+          </nav>
+          <main className="main">
+            <div className="main__left">
+              {showNav ? <NavBurger toggleNav={toggleNav} /> : null}
+              <Router />
+            </div>
+            <div className="main__right">
+              <LastNews />
+              <Recommend />
+              <Finance />
+              <WidelyRead />
+            </div>
+          </main>
+        </div>
       </div>
       <footer>
         <Footer />

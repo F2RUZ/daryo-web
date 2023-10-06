@@ -1,7 +1,7 @@
 import React from "react";
 import "./localnews.scss";
 import WorldNewsCard from "../../UI/RecommendCard/RecommensCard";
-import japan from '../../../assets/images/tayvandaTufon.jpg';
+import japan from "../../../assets/images/tayvandaTufon.jpg";
 
 import localDataNews from "../../../assets/fetch-data/local-data-news";
 const LocalNews = () => {
@@ -30,7 +30,7 @@ const LocalNews = () => {
         </div>
       </div>
 
-      <h2 className="worldnews__subtitle">
+      <h2 className="worldnews__subtitle localnews__subtitle">
         <span>Mahalliy</span> – ENG SO‘NGGI XABARLARI
       </h2>
     </>

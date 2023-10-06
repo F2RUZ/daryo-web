@@ -10,18 +10,32 @@ a {
   text-decoration: none;
   color: unset;
 }
+body {
+  // color: white;
+  background-color: var(--body_background);
+  color: var(--body_color);
+}
 
 .wrapper {
-  width: 1640px;
+  width: 100%;
   min-height: 100vh;
   margin: 50px auto;
 }
+.container {
+  width: 90%;
+  margin: 100px auto;
+}
 
 .main {
-  display: flex;
-  align-items: start;
-  gap: 45px;
   margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.NAVBAR {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
 }
 
 footer {
@@ -62,11 +76,18 @@ footer {
 
 @media only screen and (max-width: 425px) {
   .wrapper {
-    width: 425px;
-    padding: 50px 30px;
-    border: 1px solid red;
+    margin: 40px auto;
+    overflow-x: hidden;
+  }
+  .container {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .main {
+    margin-top: 20px;
     flex-direction: column;
   }
 }

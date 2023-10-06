@@ -3,21 +3,32 @@ import "./footerbottom.scss";
 const FooterBottom = () => {
   return (
     <div className="footerbottom">
-      <p>© «Simple Networking Solutions» MChJ, 2013–2023</p>
-      <div className="footer__circle">
-        <i class="ri-megaphone-line"></i>
+      <p className="footerbottom__text">
+        © «Simple Networking Solutions» MChJ, 2013–2023
+      </p>
+      <div className="footerbottom__card">
+        <div className="footer__circle">
+          <i class="ri-megaphone-line"></i>
+        </div>
+        <p className="footerbottom__text">Yosh bo‘yicha cheklov</p>
       </div>
-      <p>Yosh bo‘yicha cheklov</p>
-      <div className="footer__circle">
-        <i class="ri-smartphone-line"></i>
-      </div>
-      <p>Xato topdingizmi? Ctrl+Enter’ni bosing</p>
-      <p> Foydalanish shartlari</p>
-      <hr className="footer__hr" />
-      <p>Maxfiylik siyosati</p>
-      <hr className="footer__hr" />
 
-      <p>Reklama</p>
+      <div className="footerbottom__card">
+        <div className="footer__circle">
+          <i class="ri-smartphone-line"></i>
+        </div>
+        <p className="footerbottom__text">
+          Xato topdingizmi? Ctrl+Enter’ni bosing
+        </p>
+      </div>
+      <div className="footerbottom__card">
+        <p className="footerbottom__text"> Foydalanish shartlari</p>
+        <hr className="footer__hr" />
+        <p className="footerbottom__text">Maxfiylik siyosati</p>
+        <hr className="footer__hr" />
+
+        <p className="footerbottom__text">Reklama</p>
+      </div>
     </div>
   );
 };

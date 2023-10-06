@@ -1,7 +1,22 @@
-.finance{
-
-    &__title{
-        font-size: 20px;
-        width: 300px;
+.finance {
+  &__title {
+    font-size: 20px;
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .finance {
+    &__card {
+      gap: 0;
+      width: 90%;
     }
+    &__img {
+      width: 100%;
+    }
+    &__title {
+      font-size: 11px;
+      font-weight: 900;
+      width: 70%;
+    }
+  }
 }

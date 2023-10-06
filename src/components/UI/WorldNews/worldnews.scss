@@ -1,13 +1,13 @@
 .worldnews {
+  width: 90%;
   margin-top: 50px;
   display: flex;
-  align-items: start;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 20px;
 
   &__title {
+    width: 90%;
     margin-top: 100px;
-    background-color: white;
-    padding: 0;
   }
   &__hr {
     width: 90%;
@@ -16,15 +16,19 @@
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10px;
     margin-top: 35px;
+    &-text {
+      width: 60%;
+      font-size: 12px;
+    }
     &-img {
       width: 400px;
     }
     &-title {
-      font-size: 22px;
+      font-size: 14px;
       font-weight: 700;
-      width: 400px;
+      width: 80%;
       transition: all 0.3s linear;
       &:hover {
         color: rgb(4, 130, 144);
@@ -34,63 +38,80 @@
   &__card {
     &-box {
       flex-direction: row-reverse;
-      gap: 30px;
+      gap: 20px;
     }
     &-title {
-      width: 400px;
-      font-size: 20px;
+      width: 90%;
+      font-size: 14px;
       font-weight: 700;
+    }
+    &-text {
+      font-size: px;
     }
   }
   &__subtitle {
+    width: 90%;
     text-align: center;
     padding: 5px 10px;
-    background-color: rgb(10, 156, 188);
+    border-radius: 5px;
+    background: rgb(14, 2, 52);
+    background: linear-gradient(
+      90deg,
+      rgba(14, 2, 52, 1) 0%,
+      rgba(8, 46, 113, 1) 100%,
+      rgba(161, 49, 205, 1) 100%,
+      rgba(11, 11, 11, 1) 100%,
+      rgba(36, 42, 96, 1) 100%,
+      rgba(185, 87, 133, 1) 100%,
+      rgba(166, 138, 35, 1) 100%
+    );
+    margin-top: 50px;
+    transition: all 0.3s linear;
+    &:hover {
+      color: black;
+    }
   }
 }
 
 @media only screen and (max-width: 425px) {
   .worldnews {
+     &__title {
+      background-color: transparent;
+      font-size: 20px;
+     }
+    width: 100%;
     flex-direction: column;
-    &__left {
-      &-pic {
-        width: 350px;
-      }
+    &__hr {
+      width: 100%;
     }
     &__card {
-      &-box {
-        gap: 10px;
+      width: 100%;
+
+      &-img {
+        width: 120px;
+        // height: 55px;
       }
       &-title {
-        width: 200px;
-        font-size: 12px;
-        font-weight: 500;
+        width: 100%;
+        font-size: 11px;
+        font-weight: 900;
+      }
+      &-date {
+        font-size: 8px;
+      }
+    }
+
+    &__title {
+      margin-top: 30px;
+    }
+    &__left {
+      &-img {
+        width: 385px;
       }
     }
     &__subtitle {
-      width: 370px;
-      font-size: 18px;
+      width: 100%;
+      font-size: 16px;
     }
-    .worldnews__title {
-      font-size: 12px;
-    }
-  }
-  .worldnews__left-title{
-    width: 350px;
-    font-size: 15px;
-  }
-  .worldnews__left-text{
-    width: 350px;
-
-  }
-  .worldnews__left-img{
-    width: 320px;
-  }
-  .worldnews__hr{
-    width: 320px;
-  }
-  .worldnews__card-title{
-    width: 180px;
-    font-size: 12px;
   }
 }

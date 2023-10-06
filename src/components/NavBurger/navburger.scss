@@ -1,0 +1,84 @@
+.navburger {
+  position: absolute;
+  background: rgb(11, 5, 83);
+  background: linear-gradient(
+    90deg,
+    rgba(11, 5, 83, 1) 0%,
+    rgba(15, 22, 113, 1) 100%,
+    rgba(161, 49, 205, 1) 100%,
+    rgba(11, 11, 11, 1) 100%,
+    rgba(36, 42, 96, 1) 100%,
+    rgba(185, 87, 133, 1) 100%,
+    rgba(166, 138, 35, 1) 100%
+  );
+  padding: 50px 100px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-arrow {
+      font-size: 50px;
+    }
+  }
+  &__logo {
+    width: 200px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &,
+    Link {
+      color: black;
+    }
+  }
+  &__hr {
+    width: 100%;
+  }
+  &__socials {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  &__media {
+    font-size: 40px;
+    transition: all 0.5s linear;
+    &:hover {
+      color: rgba(0, 94, 255, 0.664);
+    }
+  }
+  &__text {
+    font-size: 10px;
+    font-weight: 900;
+  }
+  &__footer {
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .navburger {
+    top: 55px;
+    padding: 50px 20px;
+    width: 90%;
+    overflow-y: scroll;
+    &__socials {
+      gap: 10px;
+    }
+    &__media{
+        font-size: 20px;
+    }
+  }
+}

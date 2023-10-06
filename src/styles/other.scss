@@ -1,0 +1,13 @@
+.OthersPage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  margin-right: 125px;
+}
+.others__title {
+  margin-top: 0 !important;
+}
+.other__imgg {
+  height: 250px;
+  border-radius: 3px;
+}

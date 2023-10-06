@@ -1,103 +1,110 @@
-import React from "react";
 import "./navbar.scss";
+import DarkMode from "../DarkMode/DarkMode";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+import Logo from "../../assets/images/logo.svg";
+
+const Navbar = ({ toggleNav }) => {
   return (
     <div className="navbar">
       <ul className="navbar__list">
         <li className="navbar__item">
           <div className="dropdown">
-            <a className="navbar__link" href="/profile">
+            <NavLink className="navbar__link" to="/">
               Profile
-            </a>
+              <i className="ri-arrow-down-line arrow"></i>
+            </NavLink>
             <div className="dropdown-options">
-              <a href="/mehridaryo">Mehridaryo</a>
-              <a href="/boshqalar">Boshqalar</a>
+              <NavLink to="/mehridaryo">Mehridaryo</NavLink>
+              <NavLink to="/otherspage">Boshqalar</NavLink>
             </div>
           </div>
-          <i className="ri-arrow-down-line arrow"></i>
         </li>
         <li className="navbar__item">
           <div className="dropdown">
-            <a className="navbar__link" href="/markaziy-osiyo">
+            <NavLink className="navbar__link" to="/otherspage">
               Markaziy Osiyo
-            </a>
+              <i className="ri-arrow-down-line arrow"></i>
+            </NavLink>
             <div className="dropdown-options">
-              <a href="/qirgiz">Qirg'iziston</a>
-              <a href="/kazak">Qozog'iston</a>
-              <a href="/tajik">Tojikiston</a>
-              <a href="/turkmen">Turkmaniston</a>
-              <a href="/afgan">Afg'oniston</a>
+              <NavLink to="/kirgiz">Qirg'iziston</NavLink>
+              <NavLink to="/kirgiz">Qozog'istosn</NavLink>
+              <NavLink to="/kirgiz">Tojikiston</NavLink>
+              <NavLink to="/kirgiz">Turkmaniston</NavLink>
+              <NavLink to="/kirgiz">Afg'oniston</NavLink>
             </div>
           </div>
-          <i className="ri-arrow-down-line arrow"></i>
         </li>
         <li className="navbar__item">
-          <a className="navbar__link" href="/dunyo">
+          <NavLink className="navbar__link" to="/otherspage">
             Dunyo
-          </a>
+          </NavLink>
         </li>
         <li className="navbar__item">
           <div className="dropdown">
-            <a className="navbar__link" href="/profile">
+            <NavLink className="navbar__link" to="/kirgiz">
               Pul
-            </a>
+              <i className="ri-arrow-down-line arrow"></i>
+            </NavLink>
             <div className="dropdown-options">
-              <a href="/mehridaryo">Iqtisodiyot</a>
-              <a href="/boshqalar">Moliya</a>
-              <a href="/boshqalar">Kripto</a>
-              <a href="/boshqalar">Biznes</a>
+              <NavLink to="/otherspage">Iqtisodiyot</NavLink>
+              <NavLink to="/otherspage">Moliya</NavLink>
+              <NavLink to="/otherspage">Kripto</NavLink>
+              <NavLink to="/otherspage">Biznes</NavLink>
             </div>
           </div>
-          <i className="ri-arrow-down-line arrow"></i>
         </li>
         <li className="navbar__item">
           <div className="dropdown">
-            <a className="navbar__link" href="/profile">
+            <NavLink className="navbar__link" to="/">
               Madaniyat
-            </a>
+              <i className="ri-arrow-down-line arrow"></i>
+            </NavLink>
             <div className="dropdown-options">
-              <a href="/mehridaryo">Kino</a>
-              <a href="/boshqalar">Kitob</a>
-              <a href="/boshqalar">Musiqa</a>
-              <a href="/boshqalar">Shou-biznes</a>
+              <NavLink to="/otherspage">Kino</NavLink>
+              <NavLink to="/otherspage">Kitob</NavLink>
+              <NavLink to="/otherspage">Musiqa</NavLink>
+              <NavLink to="/otherspage">Shou-biznes</NavLink>
             </div>
           </div>
-          <i className="ri-arrow-down-line arrow"></i>
         </li>
         <li className="navbar__item">
           <div className="dropdown">
-            <a className="navbar__link" href="/profile">
+            <NavLink className="navbar__link" to="/profile">
               Lifistyle
-            </a>
+              <i className="ri-arrow-down-line arrow"></i>
+            </NavLink>
             <div className="dropdown-options">
-              <a href="/mehridaryo">Ayollar</a>
-              <a href="/boshqalar">Texnologiyalar</a>
-              <a href="/boshqalar">Avto</a>
-              <a href="/boshqalar">Talim</a>
+              <NavLink to="/otherspage">Ayollar</NavLink>
+              <NavLink to="/otherspage">Texnologiyalar</NavLink>
+              <NavLink to="/otherspage">Avto</NavLink>
+              <NavLink to="/otherspage">Talim</NavLink>
             </div>
           </div>
-          <i className="ri-arrow-down-line arrow"></i>
         </li>
         <li className="navbar__item">
-          <a className="navbar__link" href="/dunyo">
+          <NavLink className="navbar__link" to="/otherspage">
             Sport
-          </a>
+          </NavLink>
         </li>
         <li className="navbar__item">
-          <a className="navbar__link" href="/dunyo">
+          <NavLink className="navbar__link" to="/kirgiz">
             Koluministlar
-          </a>
+          </NavLink>
         </li>
         <li className="navbar__item">
-          <a className="navbar__link" href="/dunyo">
+          <NavLink className="navbar__link" to="/mehridaryo">
             Multimedia
-          </a>
+          </NavLink>
         </li>
       </ul>
+
       <ul className="navbar__media__list">
+        {/* <li>
+          <i className="ri-moon-line navbar__moon "></i>
+        </li> */}
         <li>
-          <i className="ri-moon-line navbar__moon"></i>
+          <DarkMode />
         </li>
         <li>
           <i class="ri-search-line"></i>
@@ -105,21 +112,27 @@ const Navbar = () => {
 
         <li className="navbar__language">
           <div className="dropdown">
-            <a className="navbar__link" href="/profile">
+            <NavLink className="navbar__link" to="/profile">
               O'ZB
-            </a>
-            <i className="ri-arrow-down-line arrow"></i>
+              <i className="ri-arrow-down-line arrow"></i>
+            </NavLink>
 
-            <div className="dropdown-options">
-              <a href="/mehridaryo">Uzbek</a>
-              <a href="/boshqalar">Rus</a>
-              <a href="/boshqalar">Eng</a>
+            <div className="dropdown-options navbar__language">
+              <NavLink to="/otherspage">Uzbek</NavLink>
+              <NavLink to="/otherspage">Rus</NavLink>
+              <NavLink to="/otherspage">Eng</NavLink>
             </div>
           </div>
         </li>
       </ul>
 
-      <div className="navbar__burger">
+      <div className="navbar__logo">
+        <NavLink to="/">
+          <img className="navbar__logo-img" src={Logo} alt="" />
+        </NavLink>
+      </div>
+
+      <div onClick={toggleNav} className="navbar__burger">
         <div className="navbar__burger-item"></div>
         <div className="navbar__burger-item"></div>
         <div className="navbar__burger-item"></div>
