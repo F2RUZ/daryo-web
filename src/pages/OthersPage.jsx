@@ -10,8 +10,8 @@ const OthersPage = () => {
       </h2>
       <div className="lastnews__span"></div>
       <div className="OthersPage">
-        {OtherData.map((item) => (
-          <Other key={item.id} item={item} />
+        {OtherData.map((item, index) => (
+          <Other key={index} item={item} />
         ))}
       </div>
     </div>

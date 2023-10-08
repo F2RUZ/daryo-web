@@ -10,8 +10,8 @@ const Mehridaryo = () => {
       </h2>
       <div className="lastnews__span"></div>
       <div className="mehridayro OthersPage">
-        {MehridaryoData.map((item) => (
-          <Other key={item.id} item={item} />
+        {MehridaryoData.map((item, index) => (
+          <Other key={index} item={item} />
         ))}
       </div>
     </div>

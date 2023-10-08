@@ -11,8 +11,8 @@ const LastNews = () => {
       <hr className="lastnews__hr" />
       <div className="lastnews">
         <div className="lastnews__bottom">
-          {LastData.map((item) => (
-            <LastnewsCard key={item.id} item={item} />
+          {LastData.map((item, index) => (
+            <LastnewsCard key={index} item={item} />
           ))}
         </div>
       </div>

@@ -8,14 +8,14 @@ const FooterBottom = () => {
       </p>
       <div className="footerbottom__card">
         <div className="footer__circle">
-          <i class="ri-megaphone-line"></i>
+          <i className="ri-megaphone-line"></i>
         </div>
         <p className="footerbottom__text">Yosh bo‘yicha cheklov</p>
       </div>
 
       <div className="footerbottom__card">
         <div className="footer__circle">
-          <i class="ri-smartphone-line"></i>
+          <i className="ri-smartphone-line"></i>
         </div>
         <p className="footerbottom__text">
           Xato topdingizmi? Ctrl+Enter’ni bosing

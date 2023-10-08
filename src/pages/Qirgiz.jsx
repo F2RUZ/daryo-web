@@ -9,8 +9,8 @@ const Qirgiz = () => {
       </h2>
       <div className="lastnews__span"></div>
       <div className="kirgiz OthersPage">
-        {kirgizData.map((item) => (
-          <Other key={item.id} item={item} />
+        {kirgizData.map((item, index) => (
+          <Other key={index} item={item} />
         ))}
       </div>
     </div>
